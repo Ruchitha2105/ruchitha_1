@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Form</title>
+    <!-- <link rel="stylesheet" type="text/css" href="logincss.css"> -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            /* background-image: url('https://img.freepik.com/premium-photo/blurred-colorful-wallpaper-background_976742-179.jpg'); */
+            background-image: linear-gradient(rgb(60, 2, 98), rgb(178, 160, 192));
+            width: 100vw;
+            height: 100vh;
+
+            background-size: cover
+        }
+
+        .login {
+            width: 350px;
+            overflow: hidden;
+            margin: auto;
+            margin: 20 0 0 450px;
+            padding: 80px;
+            background: rgb(197, 168, 212);
+            border-radius: 15px;
+
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            padding: 25px;
+        }
+
+        label {
+            color: rgb(33, 4, 54);
+            font-size: 17px;
+        }
+
+        #ai {
+            text-decoration: none;
+
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: none;
+
+
+        }
+
+        #Uname {
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-radius: 3px;
+            padding-left: 8px;
+        }
+
+        #Pass {
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-radius: 3px;
+            padding-left: 8px;
+
+        }
+
+        #log {
+            width: 300px;
+            height: 30px;
+            border: none;
+            border-radius: 17px;
+            padding-left: 7px;
+            color: blue;
+
+
+        }
+
+        span {
+            color: white;
+            font-size: 17px;
+        }
+
+        a {
+            float: right;
+            background-color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Login Page</h2><br>
+    <div class="login">
+        <form id="login" method="get" action="login.php" onsubmit="cs()">
+            <label><b>User Name
+                </b>
+            </label>
+            <input type="text" name="Uname" id="Uname" placeholder="Username">
+            <br><br>
+            <label><b>Password
+                </b>
+            </label>
+            <input type="Password" name="Pass" id="Pass" placeholder="Password">
+            <br><br>
+            <input type="submit" name="log" id="log" value="Sign In" onclick="location.href='shopping.html';">
+            <br>
+            <br>
+            <input type="submit" name="log" id="log" value="Sign Up" onclick="location.href='registration.html';">
+            <br>
+
+
+
+            <!-- <span>Remember me</span>
+        <br><br>
+        Forgot <a href="#">Password</a> -->
+        </form>
+        <script>
+            function cs() {
+                window.alert("welcome");
+            }
+        </script>
+    </div>
+</body>
+
+</html>
