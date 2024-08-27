@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            background-image: linear-gradient(rgb(60, 2, 98), rgb(178, 160, 192));
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+        }
+        .full {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            border-radius: 15px;
+            width: 300px;
+            margin: auto;
+            padding: 20px;
+        }
+        input {
+            padding: 8px;
+            margin: 10px;
+            width: calc(100% - 20px);
+        }
+       .one{
+            margin: 0;
+            padding: 3px;
+        }
+        .two{
+            padding: 2px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <div class="full">
+        <form id="registrationForm">
+            <label for="name">Enter name: </label><br>
+            <input type="text" id="name" placeholder="Enter name" required><br>
+    
+            <label for="gender">Gender:</label><br>
+            <input type="radio" name="sgender" id="male" class="one" required>
+            <label for="male" class="two">Male</label><br>
+            <input type="radio" name="sgender" id="female" class="one" required>
+            <label for="female" class="two">Female</label><br>
+            <input type="radio" name="sgender" id="others" class="one" required>
+            <label for="others" class="two">Others</label><br>
+    
+            <label for="dob">Enter Date of Birth: </label>
+            <input type="date" id="dob" required><br>
+    
+            <label for="email">Enter email: </label><br>
+            <input type="email" id="email" placeholder="Enter email" required><br>
+    
+            <label for="password">Enter password: </label><br>
+            <input type="password" id="password" placeholder="Enter password" required minlength="8"><br>
+    
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Invalid email address');
+                return false;
+            }
+
+            if (password.length < 8) {
+                alert('Password must be at least 8 characters long');
+                return false;
+            }
+
+            // If all checks pass, set the form action and submit
+            event.target.action = 'shopping.html';
+            event.target.submit();
+        });
+    </script>
+</body>
+</html>
